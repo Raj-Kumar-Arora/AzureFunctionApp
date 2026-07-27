@@ -1,32 +1,28 @@
-Azure Function App
-
-Overview
-
-Architecture
-
-Technology Stack
-
-Function Workflow
-
-Implementation Highlights
-
-Getting Started
-
-Configuration
-
-Future Enhancements
-
 # ⚡ Azure Function App
 
-> A serverless HTTP API built using **Azure Functions (.NET Isolated Worker)** demonstrating cloud-native development, dependency injection, structured logging, and event-driven application design.
+> A serverless HTTP API built using **Azure Functions (.NET Isolated Worker)** demonstrating cloud-native development, dependency injection, structured logging, and serverless application design.
 
 ![Azure Functions](https://img.shields.io/badge/Azure_Functions-Serverless-0062AD?style=for-the-badge&logo=microsoftazure)
 ![.NET](https://img.shields.io/badge/.NET-8-512BD4?style=for-the-badge&logo=.net)
 ![C#](https://img.shields.io/badge/C%23-Programming-239120?style=for-the-badge&logo=csharp)
 
-## 📖 Project Overview
+---
 
-This project demonstrates an HTTP-triggered Azure Function built using the .NET isolated worker model.
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Architecture](#architecture)
+- [Technology Stack](#technology-stack)
+- [Function Workflow](#function-workflow)
+- [Implementation Highlights](#implementation-highlights)
+- [Getting Started](#getting-started)
+- [Future Enhancements](#future-enhancements)
+
+---
+
+## Project Overview
+
+This project demonstrates an HTTP-triggered Azure Function built using the **.NET isolated worker model**.
 
 The function exposes a lightweight serverless API endpoint that accepts HTTP GET/POST requests and returns a personalized greeting response.
 
@@ -38,7 +34,9 @@ The implementation demonstrates fundamental Azure Functions concepts including:
 - Serverless execution model
 - Cloud-native application development
 
-## 🏗 Architecture
+---
+
+## Architecture
 
 ```mermaid
 flowchart LR
@@ -49,16 +47,11 @@ Client[Client Application]
 Function --> Logic[Function Business Logic]
 
 Logic --> Response[HTTP Response]
-
-
-This renders directly on GitHub.
+```
 
 ---
 
-# Technology Stack
-
-```markdown
-## 🛠 Technology Stack
+## Technology Stack
 
 ### Cloud
 
@@ -77,7 +70,9 @@ This renders directly on GitHub.
 - Azure Functions Core Tools
 - Git
 
-## 🔄 Function Workflow
+---
+
+## Function Workflow
 
 1. Client sends HTTP GET/POST request.
 2. Azure Functions runtime activates the HTTP trigger.
@@ -87,26 +82,27 @@ This renders directly on GitHub.
 
 Example:
 
-```txt
-
+```
 GET /api/HelloFunction?name=Raj
 
 Response:
 
 Hello, Raj!
-
 ```
 
-## 🚀 Implementation Highlights
+---
+
+## Implementation Highlights
 
 - Developed using Azure Functions .NET isolated worker model.
 - Implemented HTTP-triggered serverless API endpoint.
 - Applied dependency injection using `ILoggerFactory`.
-- Added structured logging using Microsoft.Extensions.Logging.
+- Added structured logging using `Microsoft.Extensions.Logging`.
 - Implemented clean request-response handling using `HttpRequestData` and `HttpResponseData`.
 
+---
 
-## ⚙️ Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -130,10 +126,7 @@ Once started, the Azure Functions runtime hosts the HTTP-triggered endpoint loca
 
 ---
 
-# Future Enhancements
-
-```markdown
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - Add Azure Service Bus trigger
 - Add Blob Storage integration
